@@ -17,18 +17,18 @@ import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <div className="flex justify-center mt-5 h-full">
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={true}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="container">
-        <ToastContainer
-          position="top-center"
-          autoClose={1000}
-          hideProgressBar={true}
-          newestOnTop={true}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />

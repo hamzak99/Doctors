@@ -70,6 +70,45 @@ const NavBar = () => {
             Create Account
           </button>
         )}
+        <img
+          onClick={() => setShowMenu(true)}
+          src={assets.menu_icon}
+          alt=""
+          className=" md:hidden"
+        />
+        {/* { menu mobil} */}
+        <div
+          className={`${
+            showMenu ? "fixed w-full" : "h-0 w-0"
+          } right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}
+        >
+          <div className="flex justify-between">
+            <img src={assets.logo} alt="" />
+            <img
+              onClick={() => setShowMenu(false)}
+              src={assets.cross_icon}
+              alt=""
+            />
+          </div>
+          <ul className="flex flex-col items-center text-3xl">
+            <NavLink to="/">
+              <li className="py-1">Home</li>
+              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+            </NavLink>
+            <NavLink to="/doctors">
+              <li className="py-1">All Doctors</li>
+              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+            </NavLink>
+            <NavLink to="/about">
+              <li className="py-1">About</li>
+              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+            </NavLink>
+            <NavLink to="/contact">
+              <li className="py-1">Contact</li>
+              <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
+            </NavLink>
+          </ul>
+        </div>
       </div>
     </nav>
   );

@@ -4,14 +4,14 @@ import { assets } from "../assets/assets";
 const Contact = () => {
   return (
     <div>
-      <h1 className="text-center text-[30px]">
+      <h1 className="text-center text-[30px] py-3">
         CONTACT <span className="font-bold">US</span>
       </h1>
-      <div className="flex">
-        <div className="w-1/3 ">
+      <div className="flex flex-col md:flex-row">
+        <div className="md:w-1/3 ">
           <img src={assets.contact_image} alt="contact_image" />
         </div>
-        <div className="w-2/3 text-[#4B5563] pl-14 pt-8 space-y-6">
+        <div className="md:w-2/3 w-full text-[#4B5563] pt-8 space-y-6 flex flex-col">
           <h2 className="font-medium text-[24px] ">Our OFFICE</h2>
           <p>
             54709 Willms Station <br /> Suite 350, Washington, USA
